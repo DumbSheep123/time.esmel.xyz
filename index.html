@@ -16,7 +16,7 @@
     })(window, document, "clarity", "script", "effts06esr");
 </script>
 </head>
-<body onload="newtime()">
+<body onload="checkbrowser();newtime()">
     <div id="clock">
         <p class="date">{{ date }}</p>
         <p class="time">{{ time }}</p>
@@ -29,5 +29,6 @@
         </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
     <script src="./script.js"></script>
+    <script src="./redirect.js" defer></script>
 </body>
 </html>
