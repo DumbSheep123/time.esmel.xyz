@@ -7,6 +7,6 @@
     }
 };*/
 
-if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+if (/Safari/.test(navigator.userAgent)) {
     document.location = "https://xn--9x8h.madebyesmel.com"
   }
