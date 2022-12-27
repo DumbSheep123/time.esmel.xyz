@@ -45,5 +45,5 @@ function zeroPadding(num, digit) {
 
 
 setInterval(function newtime(){
-    document.title = clock.time + " " + clock.date + " - Made by Andrew Frykman";
+    document.title = clock.time + " " + clock.date + "";
 }, 10); 
