@@ -72,9 +72,11 @@ p {
 #planman {
   text-decoration: underline;
   text-decoration-color: #ffffff00;
+  cursor: pointer;
   transition: 300ms;
 }
 
 #planman:hover {
   text-decoration-color: #ffffff;
 }
+
