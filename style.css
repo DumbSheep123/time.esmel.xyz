@@ -72,7 +72,7 @@ p {
 #planman {
   text-decoration: underline;
   text-decoration-color: #ffffff00;
-  cursor: url('https://raw.githubusercontent.com/PlanMan1717/SmileyCDN/main/smiley-face-svgrepo-com.svg');
+  cursor: pointer;
   transition: 300ms;
 }
 
