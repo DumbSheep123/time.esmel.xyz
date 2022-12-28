@@ -68,3 +68,13 @@ p {
   -webkit-touch-callout: auto !important;
   -khtml-user-select: auto !important;
 }
+
+#planman {
+  text-decoration: underline;
+  text-decoration-color: #ffffff00;
+  transition: 300ms;
+}
+
+#planman:hover {
+  text-decoration-color: #ffffff;
+}
