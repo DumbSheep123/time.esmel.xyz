@@ -69,14 +69,14 @@ a {
   -khtml-user-select: auto !important;
 }
 
-#planman {
+#planman, #gohome {
   text-decoration: underline;
   text-decoration-color: #ffffff00;
   cursor: pointer;
   transition: 300ms;
 }
 
-#planman:hover {
+#planman:hover, #gohome:hover {
   text-decoration-color: #ffbb00;
 }
 
