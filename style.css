@@ -57,6 +57,7 @@ p {
   font-size: 12px;
   padding: 20px 0 0;
   color: #ffbb00;
+  cursor: pointer;
   text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 }
 
