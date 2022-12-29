@@ -27,7 +27,7 @@ function updateTime() {
         zeroPadding(cd.getSeconds(), 2);
     clock.date =
         zeroPadding(cd.getFullYear(), 4) +
-        "," +
+        "-" +
         zeroPadding(cd.getMonth() + 1, 2) +
         "-" +
         zeroPadding(cd.getDate(), 2) +
