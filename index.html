@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="https://esmel.xyz/apple-touch-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -29,12 +29,17 @@
     </div>
     <script>
         function credits() {
-            alert("Thanks to Jake Biesinger for adding the following code: \n\nsetInterval(function newtime(){ \ndocument.title = clock.time + \" \" + clock.date + \" - Made by Andrew Frykman\"\; \n\}, 10)\;\")\;");
+            alert("Thanks to Jake Biesinger for adding the following code: \n\nsetInterval(function newtime(){ \ndocument.title = clock.time + \" \" + clock.date + \"\"; \n\}, 10)\;\")\;");
         }
+
+
+        setInterval(function newtime(){
+            document.title = clock.time + " " + clock.date + "";
+        }, 10); 
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
-    <script src="./script.js"></script>
-    <script src="./redirect.js" defer></script>
+    <script src="script.js"></script>
+    <script src="redirect.js" defer></script>
 </body>
 
 </html>
