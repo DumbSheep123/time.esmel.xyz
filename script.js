@@ -44,6 +44,6 @@ function zeroPadding(num, digit) {
 }
 
 
-setInterval(function newtime(){
-    document.title = clock.time + " " + clock.date + "";
+setInterval(function newtime() {
+    document.title = clock.time + " " + clock.date;
 }, 10); 
