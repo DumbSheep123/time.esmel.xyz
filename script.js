@@ -1,5 +1,5 @@
-const date = document.querySelector(".date");
-const time = document.querySelector(".time");
+const date = document.getElementsByClassName("date");
+const time = document.getElementsByClassName("time");
 
 const week = [
     "SUNDAY",
@@ -13,7 +13,7 @@ const week = [
 
 function updateTime() {
     const cd = new Date();
-    const date =
+    const currentDate =
         zeroPadding(cd.getFullYear(), 4) +
         "-" +
         zeroPadding(cd.getMonth() + 1, 2) +
@@ -21,18 +21,17 @@ function updateTime() {
         zeroPadding(cd.getDate(), 2) +
         " " +
         week[cd.getDay()];
-    const time =
+    const currentTime =
         zeroPadding(cd.getHours(), 2) +
         ":" +
         zeroPadding(cd.getMinutes(), 2) +
         ":" +
         zeroPadding(cd.getSeconds(), 2);
 
-    dateElem.textContent = date;
-    timeElem.textContent = time;
+    date[0].textContent = currentDate;
+    time[0].textContent = currentTime;
 }
 
-// Call updateTime function every 100ms
 setInterval(updateTime, 100);
 
 function zeroPadding(num, digit) {
