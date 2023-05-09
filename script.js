@@ -1,47 +1,20 @@
-const date = document.getElementsByClassName("date");
-const time = document.getElementsByClassName("time");
+const date = document.getElementById("date");
+const time = document.getElementById("time");
 
-const week = [
-    "SUNDAY",
-    "MONDAY",
-    "TUESDAY",
-    "WEDNESDAY",
-    "THURSDAY",
-    "FRIDAY",
-    "SATURDAY",
-];
+const week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 function updateTime() {
     const cd = new Date();
-    const currentDate =
-        zeroPadding(cd.getFullYear(), 4) +
-        "-" +
-        zeroPadding(cd.getMonth() + 1, 2) +
-        "-" +
-        zeroPadding(cd.getDate(), 2) +
-        " " +
-        week[cd.getDay()];
-    const currentTime =
-        zeroPadding(cd.getHours(), 2) +
-        ":" +
-        zeroPadding(cd.getMinutes(), 2) +
-        ":" +
-        zeroPadding(cd.getSeconds(), 2);
-
-    date[0].textContent = currentDate;
-    time[0].textContent = currentTime;
+    const currentDate = `${cd.getFullYear()}-${zeroPadding(cd.getMonth() + 1, 2)}-${zeroPadding(cd.getDate(), 2)} ${week[cd.getDay()]}`;
+    const currentTime = `${zeroPadding(cd.getHours(), 2)}:${zeroPadding(cd.getMinutes(), 2)}:${zeroPadding(cd.getSeconds(), 2)}`;
+    date.textContent = currentDate;
+    time.textContent = currentTime;
 }
 
 setInterval(updateTime, 100);
 
 function zeroPadding(num, digit) {
-    let zero = "";
-    for (let i = 0; i < digit; i++) {
-        zero += "0";
-    }
-    return (zero + num).slice(-digit);
+    return String(num).padStart(digit, '0');
 }
 
-setInterval(function newtime() {
-    document.title = clock.data.time + " " + clock.data.date;
-}, 10);
+setInterval(() => document.title = `${time.textContent} ${date.textContent}`, 10);

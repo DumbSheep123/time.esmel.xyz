@@ -8,17 +8,6 @@ body {
   background-size: 100%;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  user-select: none;
-}
-
 #clock {
   font-family: "Share Tech Mono", monospace;
   color: #ffffff;
@@ -29,6 +18,12 @@ p {
   transform: translate(-50%, -50%);
   color: #daf6ff;
   text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+}
+
+.time,
+.date {
+  margin: 0;
+  padding: 0;
 }
 
 #clock .time {
@@ -47,23 +42,4 @@ p {
   font-size: 12px;
   padding: 20px 0 0;
   text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  font-size: 12px;
-  padding: 20px 0 0;
-  color: #ffbb00;
-  cursor: pointer;
-  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
-}
-
-.enabled a {
-  -ms-user-select: auto !important;
-  -moz-user-select: auto !important;
-  -webkit-user-select: auto !important;
-  -webkit-touch-callout: auto !important;
-  -khtml-user-select: auto !important;
-  user-select: auto !important;
 }
