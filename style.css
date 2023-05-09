@@ -5,7 +5,6 @@ body {
 
 body {
   background: #000;
-  /*background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);*/
   background-size: 100%;
 }
 
@@ -61,25 +60,10 @@ a {
 }
 
 .enabled a {
-  user-select: auto !important;
   -ms-user-select: auto !important;
   -moz-user-select: auto !important;
   -webkit-user-select: auto !important;
   -webkit-touch-callout: auto !important;
   -khtml-user-select: auto !important;
+  user-select: auto !important;
 }
-
-/*Start Originally created by PlanMan1717*/
-
-#planman, #gohome {
-  text-decoration: underline;
-  text-decoration-color: #ffffff00;
-  cursor: pointer;
-  transition: 300ms;
-}
-
-#planman:hover, #gohome:hover {
-  text-decoration-color: #ffbb00;
-}
-
-/*End Originally created by PlanMan1717*/

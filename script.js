@@ -1,31 +1,19 @@
-var clock = new Vue({
-    el: "#clock",
-    data: {
-        time: "",
-        date: ""
-    }
-});
+const date = document.querySelector(".date");
+const time = document.querySelector(".time");
 
-var week = [
+const week = [
     "SUNDAY",
     "MONDAY",
     "TUESDAY",
     "WEDNESDAY",
     "THURSDAY",
     "FRIDAY",
-    "SATURDAY"
+    "SATURDAY",
 ];
-var timerID = setInterval(updateTime, 100);
-updateTime();
+
 function updateTime() {
-    var cd = new Date();
-    clock.time =
-        zeroPadding(cd.getHours(), 2) +
-        ":" +
-        zeroPadding(cd.getMinutes(), 2) +
-        ":" +
-        zeroPadding(cd.getSeconds(), 2);
-    clock.date =
+    const cd = new Date();
+    const date =
         zeroPadding(cd.getFullYear(), 4) +
         "-" +
         zeroPadding(cd.getMonth() + 1, 2) +
@@ -33,17 +21,28 @@ function updateTime() {
         zeroPadding(cd.getDate(), 2) +
         " " +
         week[cd.getDay()];
+    const time =
+        zeroPadding(cd.getHours(), 2) +
+        ":" +
+        zeroPadding(cd.getMinutes(), 2) +
+        ":" +
+        zeroPadding(cd.getSeconds(), 2);
+
+    dateElem.textContent = date;
+    timeElem.textContent = time;
 }
 
+// Call updateTime function every 100ms
+setInterval(updateTime, 100);
+
 function zeroPadding(num, digit) {
-    var zero = "";
-    for (var i = 0; i < digit; i++) {
+    let zero = "";
+    for (let i = 0; i < digit; i++) {
         zero += "0";
     }
     return (zero + num).slice(-digit);
 }
 
-
 setInterval(function newtime() {
-    document.title = clock.time + " " + clock.date;
-}, 10); 
+    document.title = clock.data.time + " " + clock.data.date;
+}, 10);
